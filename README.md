@@ -4,7 +4,7 @@
 The following arguments are allowed and implemented so far:
 ```
   website            website to browse for images (without http://)
-                     for ex.: 'www.github.com' (quotation marks are not mandantory)
+                     for ex.: python html-download-img 'www.github.com' (quotation marks are not mandantory)
 ```
 The script automatically creates a new folder for the downloaded images. It's based on the given argument(website)
 to not mess up your local directory.
