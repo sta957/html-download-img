@@ -1,20 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## html-download-img (download images from html-site)
-
-# In[66]:
-
-
 from bs4 import BeautifulSoup
 import urllib
 import urllib.request
 import requests
 import sys
 import os
-
-
-# In[65]:
 
 
 url_to_scrape = 'http://' + sys.argv[1] # combine 'http://' with the given argument of cli
@@ -24,9 +16,6 @@ page_content = page.content             # get the html-content of the get-reques
 soup = BeautifulSoup(page_content)      # store the html-content into the soup variable
 img_num = 0
 x = 0
-
-
-# In[ ]:
 
 
 # create a local directory to store th images from website
@@ -69,15 +58,6 @@ for i in soup.find_all('img'):
     file_image.write(urllib.request.urlopen(image).read())
     file_image.close()
 
-
-# In[ ]:
-
-
+    
 print("Code was completed! Downloaded " + str(img_num) + " images into " + str(dir_path))
-
-
-# In[ ]:
-
-
-
 
